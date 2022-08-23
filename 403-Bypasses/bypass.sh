@@ -3,8 +3,7 @@ bypass(){
     f="$1";f="${f#http://}";f="${f#https://}";f=${f%%/*}
 
     echo -e "\nSEARCHING GAU FOR CODE 200 URLS\n"
-    echo $f | gau | anew -q 403urls.txt
-    cat 403urls.txt | httpx -fr -mc 200 -o bypass_403_urls.txt
+    echo $1 | gau | httpx -fr -mc 200 -o bypass_403_urls.txt
 
     echo -e "\nHTTP DOWNGRADE BYPASS\n"
     strip="http://$(echo $1 | sed s/'http[s]\?:\/\/'//)"
