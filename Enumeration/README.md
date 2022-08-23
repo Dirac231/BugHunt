@@ -8,3 +8,5 @@ A number of tools to aid with subdomain enumeration and web services identificat
 - ```subfuzz [DOMAIN]``` is a virtual host fuzzing procedure, that will potentially discover more hosts from a domain. Use this only against a resolved domain.
 - ```subweb [RESOLVED.txt]``` will portscan the resolved subdomains and determine what web services and technologies are running. It will also use aquatone to perform screenshots
 - ```paramdump [URLS.txt]``` will take a list of urls and dump all interesting and alive endpoints with parameters. It will then try to discover unlinked parameters using ```x8``` both in GET and POST requests
+
+Please use your custom made wordlists both for bruteforcing and parameter discovery as they change dynamically depending on the domain scope.
